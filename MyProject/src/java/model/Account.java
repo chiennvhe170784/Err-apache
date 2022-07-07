@@ -4,30 +4,32 @@
  */
 package model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ADMIN
  */
 public class Account {
-     private String email;
+    private String username;
     private String password;
     private String displayName;
-    private boolean userCheck;
+    private ArrayList<Role> roles = new ArrayList<>();
 
-    public boolean isUserCheck() {
-        return userCheck;
+    public ArrayList<Role> getRoles() {
+        return roles;
     }
 
-    public void setUserCheck(boolean userCheck) {
-        this.userCheck = userCheck;
-    }
-    
-    public String getEmail() {
-        return email;
+    public void setRoles(ArrayList<Role> roles) {
+        this.roles = roles;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
